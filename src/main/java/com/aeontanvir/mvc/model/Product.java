@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class Product implements Serializable{
 	private static final long serialVersionUID = -3532377236419382983L;
 
-    //private int productId;
+    private int productId;
     private String productName;
     private String productCategory;
     private String productDescription;
@@ -18,14 +18,14 @@ public class Product implements Serializable{
     
     
     
-    /*
+    
 	public int getProductId() {
 		return productId;
 	}
 	public void setProductId(int productId) {
 		this.productId = productId;
 	}
-	*/
+	
 	public String getProductName() {
 		return productName;
 	}

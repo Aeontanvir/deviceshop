@@ -16,16 +16,19 @@
 		</div>
 		
 		<div class="row">
-			<div class="col-md-5">
-				<img src="#" alt="image"/>
+			<div class="col-md-6">
+				<div class="thumbnail">
+					<img src="#" alt="image"/>
+				</div>
+				
 			</div>
-			<div class="col-md-5">
-				<h3>Product Name</h3>
-                <p><strong>Details</strong>:</p>
-                <p><strong>Manufacturer</strong></p>
-                <p><strong>Category</strong>:</p>
-                <p><strong>Condition</strong>:</p>
-                <p><strong>Price</strong>:</p>
+			<div class="col-md-6">
+				<h3>${product.productName}</h3>
+                <p><strong>Details</strong>: ${product.productName}</p>
+                <p><strong>Manufacturer</strong>: ${product.productManufacturer}</p>
+                <p><strong>Category</strong>: ${product.productCategory}</p>
+                <p><strong>Condition</strong>: ${product.productCondition}</p>
+                <p><strong>Price</strong>: ${product.productPrice}</p>
 			</div>
 		</div>
 		

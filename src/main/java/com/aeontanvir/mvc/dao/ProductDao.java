@@ -1,5 +1,6 @@
 package com.aeontanvir.mvc.dao;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,6 +12,7 @@ public class ProductDao {
 	
 	public List<Product> getProductList(){
 		Product product1 = new Product();
+		product1.setProductId(1);
 		product1.setProductName("Nokia 1100c");
 		product1.setProductCategory("Mobile");
 		product1.setProductDescription("Nice Mobile");
@@ -21,6 +23,7 @@ public class ProductDao {
 		product1.setProductManufacturer("Nokia");
 		
 		Product product2 = new Product();
+		product2.setProductId(2);
 		product2.setProductName("Nokia 1800");
 		product2.setProductCategory("Mobile");
 		product2.setProductDescription("Nice Mobile");
@@ -31,6 +34,7 @@ public class ProductDao {
 		product2.setProductManufacturer("Nokia");
 		
 		Product product3 = new Product();
+		product3.setProductId(3);
 		product3.setProductName("Nokia 2600");
 		product3.setProductCategory("Mobile");
 		product3.setProductDescription("Nice Mobile");
@@ -47,5 +51,14 @@ public class ProductDao {
 		
 		
 		return productList;
+	}
+	
+	public Product getProductById(int productId) throws IOException{
+		for(Product product : this.getProductList()){
+			if(product.getProductId()==productId){
+				return product;
+			}
+		}
+		throw new IOException("No product found");
 	}
 }

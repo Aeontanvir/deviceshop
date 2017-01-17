@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
+<%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ include file="/WEB-INF/views/template/header.jsp" %>
 
 
@@ -23,7 +23,8 @@
 					<th>Product Name</th>
 					<th>Category</th>
 					<th>Condition</th>
-					<th>Price</th>	
+					<th>Price</th>
+					<th>Info</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -35,6 +36,7 @@
 						<td>${product.productCategory}</td>
 						<td>${product.productCondition}</td>
 						<td>${product.productPrice}</td>
+						<td><a href='<spring:url value="/productList/viewProduct/${product.productId}" />'><span class="glyphicon glyphicon-info-sign"></span></a></td>
 					</tr>
 				</c:forEach>
 			</tbody>
