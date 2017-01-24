@@ -18,13 +18,13 @@
 		<div class="row">
 			<div class="col-md-6">
 				<div class="thumbnail">
-					<img src="#" alt="image"/>
+					<img src="<c:url value="/resources/images/${product.productId}.jpg" />" alt="image"/>
 				</div>
 				
 			</div>
 			<div class="col-md-6">
 				<h3>${product.productName}</h3>
-                <p><strong>Details</strong>: ${product.productName}</p>
+                <p><strong>Details</strong>: ${product.productDescription}</p>
                 <p><strong>Manufacturer</strong>: ${product.productManufacturer}</p>
                 <p><strong>Category</strong>: ${product.productCategory}</p>
                 <p><strong>Condition</strong>: ${product.productCondition}</p>

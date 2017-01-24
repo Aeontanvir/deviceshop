@@ -1,12 +1,19 @@
 package com.aeontanvir.mvc.controller;
 
+
 import java.io.IOException;
 import java.util.List;
 
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+
+
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+
 
 import com.aeontanvir.mvc.dao.ProductDao;
 import com.aeontanvir.mvc.model.Product;
@@ -14,7 +21,8 @@ import com.aeontanvir.mvc.model.Product;
 @Controller
 public class HomeController {
 	
-	private ProductDao productDao = new ProductDao();
+	@Autowired
+	private ProductDao productDao;
 	
 	@RequestMapping("/")
 	public String home(){
@@ -39,4 +47,16 @@ public class HomeController {
 		
 		return "viewProduct";
 	}
+	
+
+	
 }
+
+
+
+
+
+
+
+
+

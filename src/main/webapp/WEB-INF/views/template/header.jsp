@@ -51,8 +51,12 @@
 			</ul>
 			
 			<ul class="nav navbar-nav navbar-right">
-			  <li><a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> &nbsp;&nbsp;Home</a></li>
-			  <li><a href="#">Gallery</a></li>
+			  <li><a href="<c:url value="/admin" />"><span class="glyphicon glyphicon-compressed" aria-hidden="true"></span> &nbsp;&nbsp;Admin</a></li>
+              <c:if test="${pageContext.request.userPrincipal.name != null}">
+              <li>
+                  <a href="<c:url value="/j_spring_security_logout"/>"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> &nbsp;&nbsp;Logout</a>
+              </li>
+              </c:if>
 			</ul>
 		</div>
 		

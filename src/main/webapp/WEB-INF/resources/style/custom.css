@@ -58,15 +58,34 @@ and (max-width: 768px) {
 
 /* -------------------------- container-wrapper -------------------------------- */
 .container-wrapper{
-	min-height: 800px;
+	min-height: 600px;
 }
-
+/* -------------------------- login Page -------------------------------- */
+.login-part{
+	max-width: 460px;
+	margin: 150px auto;
+	background: #304059;
+	border: 1px solid #ccc;
+	padding: 25px 25px;
+	text-align: center;
+	border-radius: 10px;
+	color: #fff;
+	box-shadow: 0px 0px 10px #000;
+	overflow: hidden;
+}
+.login-part .btn{
+	float: right;
+}
+/* -------------------------- addProduct Page -------------------------------- */
+.error{
+	color: #cf0000;
+}
 
 
 
 /* -------------------------- footer -------------------------------- */
 
-footer { background-color:#0c1a1e; min-height:350px; font-family: 'Open Sans', sans-serif; }
+footer { background-color:#0c1a1e; min-height:350px; font-family: 'Open Sans', sans-serif; margin-top: 100px; }
 .footerleft { margin-top:50px; padding:0 36px; }
 .logofooter { margin-bottom:10px; font-size:25px; color:#fff; font-weight:700;}
 
@@ -87,20 +106,17 @@ footer { background-color:#0c1a1e; min-height:350px; font-family: 'Open Sans', s
      -o-transform: scale(1.1);
  }
  
- 
+.icon-ul { list-style-type:none !important; margin:0px; padding:0px;}
+.icon-ul li { line-height:75px; width:100%; float:left;}
+.icon { float:left; margin-right:5px;}
 
- 
- .icon-ul { list-style-type:none !important; margin:0px; padding:0px;}
- .icon-ul li { line-height:75px; width:100%; float:left;}
- .icon { float:left; margin-right:5px;}
- 
- 
- .copyright { min-height:40px; background-color:#000000;}
- .copyright p { text-align:left; color:#FFF; padding:10px 0; margin-bottom:0px;}
- .heading7 { font-size:21px; font-weight:700; color:#d9d6d6; margin-bottom:22px;}
- .post p { font-size:12px; color:#FFF; line-height:20px;}
- .post p span { display:block; color:#8f8f8f;}
- .bottom_ul { list-style-type:none; float:right; margin-bottom:0px;}
- .bottom_ul li { float:left; line-height:40px;}
- .bottom_ul li:after { content:"/"; color:#FFF; margin-right:8px; margin-left:8px;}
- .bottom_ul li a { color:#FFF;  font-size:12px;}
+
+.copyright { min-height:40px; background-color:#000000;}
+.copyright p { text-align:left; color:#FFF; padding:10px 0; margin-bottom:0px;}
+.heading7 { font-size:21px; font-weight:700; color:#d9d6d6; margin-bottom:22px;}
+.post p { font-size:12px; color:#FFF; line-height:20px;}
+.post p span { display:block; color:#8f8f8f;}
+.bottom_ul { list-style-type:none; float:right; margin-bottom:0px;}
+.bottom_ul li { float:left; line-height:40px;}
+.bottom_ul li:after { content:"/"; color:#FFF; margin-right:8px; margin-left:8px;}
+.bottom_ul li a { color:#FFF;  font-size:12px;}
