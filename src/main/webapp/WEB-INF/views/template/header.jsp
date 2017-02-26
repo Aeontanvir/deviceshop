@@ -47,17 +47,29 @@
 		<div class="collapse navbar-collapse" id="top-nav">
 			<ul class="nav navbar-nav">
 			  <li><a href="<c:url value="/" />"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> &nbsp;&nbsp;Home</a></li>
-			  <li><a href="<c:url value="/productList" />"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> &nbsp;&nbsp;All Product</a></li>
+			  <li><a href="<c:url value="/product/productList" />"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> &nbsp;&nbsp;All Product</a></li>
 			</ul>
 			
-			<ul class="nav navbar-nav navbar-right">
-			  <li><a href="<c:url value="/admin" />"><span class="glyphicon glyphicon-compressed" aria-hidden="true"></span> &nbsp;&nbsp;Admin</a></li>
-              <c:if test="${pageContext.request.userPrincipal.name != null}">
-              <li>
-                  <a href="<c:url value="/j_spring_security_logout"/>"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> &nbsp;&nbsp;Logout</a>
-              </li>
-              </c:if>
-			</ul>
+            <ul class="nav navbar-nav pull-right">
+                <c:if test="${pageContext.request.userPrincipal.name != null}">
+                    <li><a>Welcome: ${pageContext.request.userPrincipal.name}</a></li>
+                    <li><a href="<c:url value="/j_spring_security_logout" />">Logout</a></li>
+
+                    <c:if test="${pageContext.request.userPrincipal.name != 'admin'}">
+                        <li><a href="<c:url value="/customer/cart" />">Cart</a></li>
+                    </c:if>
+
+                    <c:if test="${pageContext.request.userPrincipal.name == 'admin'}">
+                        <li><a href="<c:url value="/admin" />">Admin</a></li>
+                    </c:if>
+
+                </c:if>
+
+                <c:if test="${pageContext.request.userPrincipal.name == null}">
+                    <li><a href="<c:url value="/login" />">Login</a></li>
+                    <li><a href="<c:url value="/register" />">Register</a></li>
+                </c:if>
+            </ul>
 		</div>
 		
 	</div>

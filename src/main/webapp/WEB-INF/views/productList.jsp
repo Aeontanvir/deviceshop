@@ -14,7 +14,7 @@
 			<h1>All Products</h1>
 			<p class="lead">Checkout all the awesome products available now!</p>
 		</div>
-		
+		<!--
 		
 		<table class="table table-striped table-hover">
 			<thead>
@@ -36,11 +36,26 @@
 						<td>${product.productCategory}</td>
 						<td>${product.productCondition}</td>
 						<td>${product.productPrice}</td>
-						<td><a href='<spring:url value="/productList/viewProduct/${product.productId}" />'><span class="glyphicon glyphicon-info-sign"></span></a></td>
+						<td><a href='<spring:url value="/product/viewProduct/${product.productId}" />'><span class="glyphicon glyphicon-info-sign"></span></a></td>
 					</tr>
 				</c:forEach>
 			</tbody>
 		</table>
+		  -->
+		  
+		  <div id="product-row" class="row">
+		  	<c:forEach items="${products}" var="product">
+				  <div class="col-xs-6 col-md-3">
+				    <a href='<spring:url value="/product/viewProduct/${product.productId}" />' class="thumbnail">
+				    	<div class="product-details">
+				    		<h3>${product.productName}</h3>
+				    		<h5>${product.productPrice}</h5>
+				    	</div>
+				      	<img src="<c:url value="/resources/images/${product.productId}.jpg" />" alt="image"/>
+				    </a>
+				  </div>
+		  	</c:forEach>
+		  </div>
 		
 		
 	</div>

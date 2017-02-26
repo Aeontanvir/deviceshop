@@ -72,6 +72,7 @@
     
 	<!-- Include angular own -->
 	<script src="<c:url value="/resources/angular-lib/angular.min.js" />"></script>
+	<script src="<c:url value="/resources/script/controller.js" />"></script>
     
     <!-- Include custom.js own -->
     <script src="<c:url value="/resources/script/custom.js" />"></script>

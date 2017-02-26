@@ -19,7 +19,7 @@ public class ProductDaoImpl implements ProductDao {
 	@Autowired
 	private SessionFactory sessionFactory;
 	
-	public Product getProductById (int id){
+    public Product getProductById (int id){
         Session session = sessionFactory.getCurrentSession();
         Product product = (Product) session.get(Product.class, id);
         session.flush();
@@ -53,5 +53,6 @@ public class ProductDaoImpl implements ProductDao {
         session.delete(product);
         session.flush();
     }
+
 
 }

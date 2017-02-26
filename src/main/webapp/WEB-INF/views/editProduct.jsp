@@ -15,7 +15,7 @@
             <p class="lead">Please update the product information here:</p>
         </div>
 
-        <form:form action="${pageContext.request.contextPath}/admin/productInventory/editProduct" method="post" commandName="product" enctype="multipart/form-data">
+        <form:form action="${pageContext.request.contextPath}/admin/product/editProduct" method="post" commandName="product" enctype="multipart/form-data">
 
          	<form:hidden path="productId" value="${product.productId}" />
 
@@ -27,9 +27,10 @@
 
             <div class="form-group">
                 <label for="category">Category</label>
-                <label class="checkbox-inline"><form:radiobutton path="productCategory" id="category" value="instrument" /> Instrument</label>
-                <label class="checkbox-inline"><form:radiobutton path="productCategory" id="category" value="record" /> Record</label>
-                <label class="checkbox-inline"><form:radiobutton path="productCategory" id="category" value="accessory" /> Accessory</label>
+
+                <label class="checkbox-inline"><form:radiobutton path="productCategory" id="category" value="mobile" /> Mobile</label> &nbsp;&nbsp;
+                <label class="checkbox-inline"><form:radiobutton path="productCategory" id="category" value="laptop" /> Laptop</label> &nbsp;&nbsp;
+                <label class="checkbox-inline"><form:radiobutton path="productCategory" id="category" value="computer" /> Computer</label> &nbsp;&nbsp;
             </div>
 
             <div class="form-group">
